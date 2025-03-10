@@ -1,7 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+	"os"
+
+	"github.com/gilberto-dev-silva/command-line.git/app"
+)
 
 func main() {
-	fmt.Println("Projeto de linha de comando...")
+	fmt.Println("Projeto consulta domínios em Go")
+
+	aplication := app.Generate()
+	if err := aplication.Run(os.Args); err != nil {
+		log.Fatal(err)
+	}
+
 }

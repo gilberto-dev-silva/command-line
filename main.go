@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"os"
 
@@ -9,8 +8,6 @@ import (
 )
 
 func main() {
-	fmt.Println("Projeto consulta domínios em Go")
-
 	aplication := app.Generate()
 	if err := aplication.Run(os.Args); err != nil {
 		log.Fatal(err)
